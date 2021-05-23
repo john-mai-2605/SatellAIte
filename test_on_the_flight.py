@@ -1,7 +1,6 @@
 from matplotlib.pyplot import imshow
 import matplotlib.pyplot as plt
 from PIL import Image
-import requests
 from gridizer import gridizer
 import argparse
 import torch
