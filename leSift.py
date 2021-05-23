@@ -7,19 +7,19 @@ import matplotlib.pyplot as plt
 
 class siftBuilder():
     def __init__(self):
-        images=[]
-        descriptors = []
+        self.images=[]
+        self.descriptors = []
 
     def add_image(self, im_arr):
         for i in im_arr:
-            images.append(i)
+            self.images.append(i)
 
     def sift(self):
         descriptors=[]
         for i in self.images:
             kp,des = sift.detetAndCompute(i)
             descriptors.append(des)
-        return np.array(descrptors)
+        return np.array(self.descriptors)
 
 
 if __name__ == "__main__":
@@ -37,4 +37,4 @@ if __name__ == "__main__":
 
     np.shape(des)
 
-    codebook, distortion = vq.kmeans(des, 3)
+    # codebook, distortion = vq.kmeans(des, 3)
